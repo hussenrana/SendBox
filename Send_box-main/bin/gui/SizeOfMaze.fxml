@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane fx:id="splitpane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SizeOfMazeController">
+   <items>
+      <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="649.0" style="-fx-background-color: #DADADA;">
+      	<children>
+      		
+                  		<Circle fill="#2276d0" layoutX="46.0" layoutY="71.0" radius="378.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+      
+                  		<Button layoutX="197.0" layoutY="324.0" mnemonicParsing="false" onAction="#GoToswing" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #ffff;" text="GO --&gt;" textFill="#2276d0">
+      			<font>
+      				<Font name="System Bold" size="14.0" />
+      			</font>
+      		</Button>
+            <Label fx:id="error" prefHeight="30.0" prefWidth="238.0" text="username or password is incorrect!" textFill="#7f0000" visible="false">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="435.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@maze-icon.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="24.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Width Of Maze">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="27.0" layoutY="203.0" strokeType="OUTSIDE" strokeWidth="0.0" text="High Of Maze">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="119.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Size Of Maze" textAlignment="CENTER" wrappingWidth="165.025390625">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Text>
+            <Button layoutX="29.0" layoutY="327.0" mnemonicParsing="false" onAction="#BackToHome" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #ffff;" text="&lt;-- Back" textFill="#2276d0">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Slider fx:id="Width" layoutX="143.0" layoutY="126.0" max="40.0" min="1.0" onMouseReleased="#WidthEvent" showTickMarks="true" value="1.0" />
+            <Slider fx:id="High" layoutX="143.0" layoutY="189.0" max="40.0" min="1.0" onMouseReleased="#HighEvent" showTickMarks="true" value="1.0" />
+            <Label fx:id="widthlabel" layoutX="302.0" layoutY="124.0" text="1" textFill="WHITE" />
+            <Label fx:id="highlabel" layoutX="302.0" layoutY="186.0" text="1" textFill="WHITE" />
+            <TextField fx:id="StartX" alignment="CENTER" layoutX="153.0" layoutY="232.0" prefHeight="31.0" prefWidth="45.0" promptText="X" />
+            <TextField fx:id="StartY" alignment="CENTER" layoutX="216.0" layoutY="232.0" prefHeight="31.0" prefWidth="45.0" promptText="Y" />
+            <TextField fx:id="EndX" alignment="CENTER" layoutX="154.0" layoutY="275.0" prefHeight="31.0" prefWidth="45.0" promptText="X" />
+            <TextField fx:id="EndY" alignment="CENTER" layoutX="217.0" layoutY="275.0" prefHeight="31.0" prefWidth="45.0" promptText="Y" />
+            <Text fill="WHITE" layoutX="27.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Point">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="27.0" layoutY="296.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Point">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Text>
+      	</children>
+      	<effect>
+      		<Glow level="0.0" />
+      	</effect>
+      </AnchorPane>
+   </items>
+</SplitPane>

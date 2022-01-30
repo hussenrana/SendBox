@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="649.0" style="-fx-background-color: #DADADA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SignUpController">
+	<children>
+		
+		<Circle fill="#2276d0" layoutX="83.0" layoutY="182.0" radius="261.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" />
+		<TextField fx:id="Username" layoutX="362.0" layoutY="112.0" prefHeight="25.0" prefWidth="278.0" promptText="Username">
+			<font>
+				<Font size="14.0" />
+			</font>
+			<opaqueInsets>
+				<Insets />
+			</opaqueInsets>
+		</TextField>
+
+		<Button fx:id="signupbtn" layoutX="556.0" layoutY="374.0" mnemonicParsing="false" onAction="#registration" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #ffff;" text=" Sign up" textFill="#2276d0">
+			<font>
+				<Font name="System Bold" size="14.0" />
+			</font>
+		</Button>
+		
+		<Label layoutX="64.0" layoutY="158.0" prefHeight="70.0" prefWidth="172.0" text="Sign up" textFill="WHITE">
+			<font>
+				<Font name="System Bold" size="48.0" />
+			</font>
+		</Label>
+      <Label fx:id="error" layoutX="406.0" layoutY="152.0" prefHeight="30.0" prefWidth="238.0" text="username or password is incorrect!" textFill="#7f0000" visible="false">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="Password" layoutX="362.0" layoutY="163.0" prefHeight="30.0" prefWidth="278.0" promptText="Password">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </PasswordField>
+      <TextField fx:id="FirstName" layoutX="361.0" layoutY="212.0" prefHeight="25.0" prefWidth="278.0" promptText="First Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <TextField fx:id="LastName" layoutX="361.0" layoutY="263.0" prefHeight="25.0" prefWidth="278.0" promptText="Last Name">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="382.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@maze-icon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="Email" layoutX="361.0" layoutY="313.0" prefHeight="25.0" prefWidth="278.0" promptText="E-mail">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </TextField>
+      <Button fx:id="back" layoutX="361.0" layoutY="372.0" mnemonicParsing="false" onAction="#MoveToLogin" prefHeight="30.0" prefWidth="79.0" style="-fx-background-color: #ffff;" text="back" textFill="#2276d0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+	</children>
+	<effect>
+		<Glow level="0.0" />
+	</effect>
+</AnchorPane>
